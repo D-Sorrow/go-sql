@@ -1,0 +1,16 @@
+	1. ¿Cuál es la primary key para la tabla de clientes? Justificar respuesta
+	
+En este escenario es el uni, yo recomendaría realizar una key compuesta entre el dni y el país de cliente puesto que, esto podría evitar inconvenientes de duplicidad en el futuro ya que hay dni que podrían llegar a repetirse pero en países distintos.
+
+
+	2. ¿Cuál es la primary key para la tabla de planes de internet? Justificar respuesta.
+
+La primary key es identificación del plan que yo la nombre como "idPlan" la cual puede ser un id numérico o alfanumérico en caso de que se necesite.
+
+
+
+	3. ¿Cómo serían las relaciones entre tablas? ¿En qué tabla debería haber foreign key? ¿A 	qué campo de qué tabla hace referencia dicha foreign key? Justificar respuesta.
+
+La interpretación que realicé es que un cliente puede llegar a tener multiples planes de internet y a su vez cualquiera que sea el plan de internet, este ultimo puede llegar a ser reservado por un cliente, con base en este razonamiento, realizo una asociación de n:n donde es necesario crea una tabla intermedia o de rompimiento que nombré "suscripción".
+
+Las foreign key se encuentran en la tabla "suscripción", estas keys pertenecen tanto a cliente como al plan, de esta forma somos capaces de rastrear cuantos planes tiene el cliente y cuales está usando.
